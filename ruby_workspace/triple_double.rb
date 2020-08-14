@@ -5,21 +5,8 @@
 # triple of a number at any place in num1 and also a straight double of
 # the same number in num2. If this isn't the case, return 0.
 
-def triple_double2(num1, num2)
-  toggle = nil
-  ('0'..'9').each do |n|
-    if num1.to_s.match?(/#{n}{3}/) && num2.to_s.match?(/#{n}{2}/)
-      toggle = 1
-      break
-    else
-      toggle = 0
-    end
-  end
-  toggle
-end
-
 def triple_double(num1, num2)
-  ('0'..'9').each do |n|
+  (0..9).each do |n|
     if num1.to_s.match?(/#{n}{3}/) && num2.to_s.match?(/#{n}{2}/)
       return 1
       break
@@ -48,3 +35,16 @@ p triple_double(666789, 12345667) == 1
 #       - iterate through arr(0-9) with conditional and toggle
 #   - if this occurs return 1
 #   - else return 0
+
+# def triple_double2(num1, num2)
+#   toggle = nil
+#   ('0'..'9').each do |n|
+#     if num1.to_s.match?(/#{n}{3}/) && num2.to_s.match?(/#{n}{2}/)
+#       toggle = 1
+#       break
+#     else
+#       toggle = 0
+#     end
+#   end
+#   toggle
+# end
