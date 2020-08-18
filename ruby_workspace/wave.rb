@@ -1,15 +1,24 @@
 # wave.rb
 
 def wave(str)
-  result = []
-  counter = 0
-  new = str.chars
-  p new
-
+result = []
+arr = str.chars
+  arr.each do |char|
+    if char == ' '
+      next
+    else
+      char.upcase!
+      result << arr.join
+      char.downcase!
+    end
+  end
+  p str
+  p arr
+  p result
 end
 
-p wave("hello") == ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
-# p wave("codewars") ==["Codewars", "cOdewars", "coDewars", "codEwars", "codeWars", "codewArs", "codewaRs", "codewarS"]
+# p wave("hello") == ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
+p wave("codewars") ==["Codewars", "cOdewars", "coDewars", "codEwars", "codeWars", "codewArs", "codewaRs", "codewarS"]
 # p wave("") == []
 # p wave("two words") == ["Two words", "tWo words", "twO words", "two Words", "two wOrds", "two woRds", "two worDs", "two wordS"]
 # p wave(" gap ") == [" Gap ", " gAp ", " gaP "]
