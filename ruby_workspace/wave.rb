@@ -12,16 +12,15 @@ arr = str.chars
       char.downcase!
     end
   end
-  p str
-  p arr
-  p result
+
+  result
 end
 
-# p wave("hello") == ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
+p wave("hello") == ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
 p wave("codewars") ==["Codewars", "cOdewars", "coDewars", "codEwars", "codeWars", "codewArs", "codewaRs", "codewarS"]
-# p wave("") == []
-# p wave("two words") == ["Two words", "tWo words", "twO words", "two Words", "two wOrds", "two woRds", "two worDs", "two wordS"]
-# p wave(" gap ") == [" Gap ", " gAp ", " gaP "]
+p wave("") == []
+p wave("two words") == ["Two words", "tWo words", "twO words", "two Words", "two wOrds", "two woRds", "two worDs", "two wordS"]
+p wave(" gap ") == [" Gap ", " gAp ", " gaP "]
 
 # input: string
 # output: array
