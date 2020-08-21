@@ -1,9 +1,7 @@
 # is_prime?.rb
 
 def is_prime?(int)
-  (2...int).each do |num|
-    return false if int % num == 0
-  end
+  (2...int).each { |num| return false if int % num == 0 }
   true
 end
 
