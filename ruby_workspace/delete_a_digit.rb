@@ -12,10 +12,25 @@
 # Constraints: 10 ≤ n ≤ 1000000.
 # [output] an integer
 
-def delete_digit(n)
-  # CODE
+def delete_digit(num)
+  digits = num.digits.reverse
+  digits.sort.shift
+  digits.join.to_i
 end
 
-delete_digit(152) == 52
-delete_digit(1001) == 101
-delete_digit(10) == 1
+p delete_digit(152) == 52
+p delete_digit(1001) == 101
+p delete_digit(10) == 1
+
+# input: integer
+# output: integer
+# rules:
+# => find the greatest number possible when removing one digit from given number
+# => given number will be greater than 10 and less than 1000000
+# data structure: integers, arrays
+# algorithm:
+# => convert integer to array (digits)
+# => sort array
+# => remove first element
+# => reverse sort and join to string and convert to integer
+# => return integer result
