@@ -13,3 +13,5 @@ def find_all_substrings(str)
 end
 
 p find_all_substrings('zzbaabcd')
+p find_all_substrings('charles')
+p find_all_substrings('racecar')

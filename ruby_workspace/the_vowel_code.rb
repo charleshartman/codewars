@@ -15,50 +15,56 @@
 # For the sake of simplicity, you can assume that any numbers passed into the
 # function will correspond to vowels.
 
-def encode(str)
-  encoded = ''
-  str.each_char do |char|
-    case char
-    when 'a'
-      encoded << '1'
-    when 'e'
-      encoded << '2'
-    when 'i'
-      encoded << '3'
-    when 'o'
-      encoded << '4'
-    when 'u'
-      encoded << '5'
-    else
-      encoded << char
-    end
-  end
-  
-  encoded
+# def encode(str)
+#   encoded = ''
+#   str.each_char do |char|
+#     case char
+#     when 'a'
+#       encoded << '1'
+#     when 'e'
+#       encoded << '2'
+#     when 'i'
+#       encoded << '3'
+#     when 'o'
+#       encoded << '4'
+#     when 'u'
+#       encoded << '5'
+#     else
+#       encoded << char
+#     end
+#   end
+#   
+#   encoded
+# end
+# 
+# def decode(str)
+#   decoded = ''
+#   str.each_char do |char|
+#     case char
+#     when '1'
+#       decoded << 'a'
+#     when '2'
+#       decoded << 'e'
+#     when '3'
+#       decoded << 'i'
+#     when '4'
+#       decoded << 'o'
+#     when '5'
+#       decoded << 'u'
+#     else
+#       decoded << char
+#     end
+#   end
+#   
+#   decoded
+# end
+def encode(s)
+  s.tr("aeiou", "12345")
 end
 
-def decode(str)
-  decoded = ''
-  str.each_char do |char|
-    case char
-    when '1'
-      decoded << 'a'
-    when '2'
-      decoded << 'e'
-    when '3'
-      decoded << 'i'
-    when '4'
-      decoded << 'o'
-    when '5'
-      decoded << 'u'
-    else
-      decoded << char
-    end
-  end
-  
-  decoded
+def decode(s)
+  s.tr("12345", "aeiou")
 end
-
 
 p encode('hello') == 'h2ll4'
 p encode('How are you today?') == 'H4w 1r2 y45 t4d1y?'
