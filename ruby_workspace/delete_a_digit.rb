@@ -14,7 +14,6 @@
 
 def delete_digit(num)
   digits = num.digits.reverse
-  digits.sort.shift
   digits.join.to_i
 end
 
