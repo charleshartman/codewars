@@ -1,4 +1,5 @@
 # equal_sides_array.rb
+# 6 kyu
 
 def find_even_index(arr)
   counter = 0
