@@ -5,7 +5,12 @@ def pairs(arr)
   total_pairs = 0
   return total_pairs if arr == []
 
-  (0..arr.max).each do |int|
+  # (0..arr.max).each do |int|
+  #   total_pairs += arr.count(int) / 2 if arr.count(int) >= 2
+  # end
+
+  # refactored better, more efficient 
+  arr.uniq.each do |int|
     total_pairs += arr.count(int) / 2 if arr.count(int) >= 2
   end
 
