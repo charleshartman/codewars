@@ -11,7 +11,6 @@ def find_outlier(integers)
   even = integers.select { |num| num.even? }
 
   odd.length == 1 ? odd[0] : even[0]
-
 end
 
 p find_outlier([0, 1, 2]) == 1
@@ -37,3 +36,5 @@ algorithm:
       else find odd integer and return it
 
 =end
+
+# completed in 15m

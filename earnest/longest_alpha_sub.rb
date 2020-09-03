@@ -14,7 +14,7 @@
 
 # If there are multiple solutions, return the one that appears first.
 
-def find_all_alpha_substrings(str)
+def longest(str)
   subs = []
 
   0.upto(str.length - 1) do |idx1|
@@ -25,11 +25,7 @@ def find_all_alpha_substrings(str)
     end
   end
 
-  subs.uniq
-end
-
-def longest(str)
-  find_all_alpha_substrings(str).max_by(&:length)
+  subs.max_by(&:length)
 end
 
 p longest('asd') == 'as'
