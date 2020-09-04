@@ -1,4 +1,5 @@
 # next_bigger.rb
+# 4 kyu
 
 =begin
 
@@ -22,7 +23,7 @@ def next_bigger(int)
   return -1 if greatest == int
   
   (int + 1).upto(greatest) do |num|
-    return num  if num.digits.sort.reverse.join.to_i == greatest
+    return num if num.digits.sort.reverse.join.to_i == greatest
   end
 end
 
