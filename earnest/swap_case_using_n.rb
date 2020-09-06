@@ -20,7 +20,7 @@
 # ^   ^ ^ ^    ^ ^ ^
 
 def spec_swap(str, bin)
-  p 12345.to_s(2)
+  # code
 end
 
 # p spec_swap("Hello world!", 11) == "heLLO wORLd!"
@@ -31,3 +31,5 @@ p spec_swap("the quick broWn fox leapt over the fence", 9) \
 # p spec_swap("how are you today?", 12345), "HOw are yoU TOdaY?")
 # p spec_swap("the lord of the rings", 0), "the lord of the rings")
 # p spec_swap("", 11345), "")
+
+# to get binary 11.to_s(2)

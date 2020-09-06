@@ -12,7 +12,8 @@
 # ["", 0]
 
 def longest_repetition(str)
-  # code
+  arr = str.chars.chunk(&:itself).map(&:last).max_by(&:length)
+  arr ? [arr[0], arr.length] : ['', 0]
 end
 
 p longest_repetition("aaaabb") == ['a', 4]
@@ -36,6 +37,12 @@ rules:
   - empty string should return ['', 0]
 
 algorithm:
-
+  - convert string to array (arr)
+  - chunk array based on char change
+  - map to capture last chunks of each subarray
+  - find the greatest length subarray
+  - unless arr is empty
+    - return first element of array and size of array as two element array
+    - else return ['', 0]
 
 =end

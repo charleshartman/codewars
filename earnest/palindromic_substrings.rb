@@ -55,7 +55,7 @@ p palindromes('knitting cassettes') == [
 
 =begin
 
-rules:
+problem:
   - find all palindromic substrings within the given string
   - palindromic means case sensitive and includes non-alphanumeric characters
   - we should return duplicate palindromic substrings
