@@ -9,5 +9,14 @@ def solve(str)
   str.scan(/[aeiou]+/).max_by { |str| str.length }.length
 end
 
+p solve("codewarriors") == 2
+p solve("suoidea") == 3
+p solve("iuuvgheaae") == 4
+p solve("ultrarevolutionariees") == 3
+p solve("strengthlessnesses") == 1
+p solve("cuboideonavicuare") == 2
+p solve("chrononhotonthuooaos") == 5
+p solve("iiihoovaeaaaoougjyaw") == 8
+
 # CW solution:
 # s.scan(/[aeiou]+/).map(&:size).max

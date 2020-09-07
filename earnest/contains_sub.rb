@@ -32,12 +32,11 @@ algorithm:
 
 def contains_sub(arr1, arr2)
   result = []
-  arr1.each do |sub|
-    arr2.each do |string|
-      result << sub if string.include?(sub)
-    end
-  end
   
+  arr1.each do |sub|
+    arr2.each { |string| result << sub if string.include?(sub) }
+  end
+
   result.uniq.sort
 end
 
@@ -56,9 +55,8 @@ p contains_sub(arr1, arr2) == ['car', 'house']
 
 =begin
 
-def contains_sub(arr1, arr2)
-  result = arr1.select { |substring| arr2.any? { |word| word.include?(substring) } }
-  result.uniq.sort
+def in_array(arr1, arr2)
+  arr1.select { |sub| arr2.any? { |str| str.include?(sub) } }.sort
 end
 
 =end
