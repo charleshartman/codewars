@@ -26,10 +26,8 @@ If a or b are nil, the problem doesn't make sense so return false.
 
 def comp(arr1, arr2)
   return false if arr1.nil? || arr2.nil?
-  arr1.all? { |num| arr2.include?(num**2) }
+  arr1.map { |num| num**2 }.sort == arr2.sort
 end
-
-
 
 p comp( [121, 144, 19, 161, 19, 144, 19, 11], 
         [11*11, 121*121, 144*144, 19*19, 161*161, 19*19, 144*144, 19*19]) == true
@@ -39,13 +37,13 @@ p comp( [121, 144, 19, 161, 19, 144, 19, 11],
 p comp( nil, 
         [11*11, 121*121, 144*144, 19*19, 161*161, 19*19, 144*144, 19*19]) == false
 
-#p comp( [121, 144, 19, 161, 19, 144, 19, 11],
-#        [132, 14641, 20736, 361, 25921, 361, 20736, 361] ) == false
+p comp( [121, 144, 19, 161, 19, 144, 19, 11],
+        [132, 14641, 20736, 361, 25921, 361, 20736, 361] ) == false
 
-# p comp( [121, 144, 19, 161, 19, 144, 19, 11],
-#         [121, 14641, 20736, 36100, 25921, 361, 20736, 361] ) == false
+p comp( [121, 144, 19, 161, 19, 144, 19, 11],
+        [121, 14641, 20736, 36100, 25921, 361, 20736, 361] ) == false
 
-# p comp( [2, 2, 3], [4, 9, 9] ) == false
+p comp( [2, 2, 3], [4, 9, 9] ) == false
 
 p comp( [], [] ) == true
 
@@ -67,11 +65,14 @@ algorithm:
     - determine if ALL elements in arr1 when squared, are included in arr2
   - return true or false
 
+# arr1.all? { |num| arr2.include?(num**2) }
+
 algorithm w/edge:
   - guard: return false if either array is nil
   - iterate through arr1
-    - if element squared in arr1 is present in arr2, delete element
-    - delete matching element(s) in arr2 if squared element from arr1 is present in arr2
-  - return true or false
+    - map to squared value and sort
+    - compare that to arr2.sort
+    - if equal then return true
+  - return false
 
 =end
