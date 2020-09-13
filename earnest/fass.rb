@@ -24,4 +24,3 @@ end
 
 p find_palindromes('charles')
 p find_palindromes('Hannah')
-
