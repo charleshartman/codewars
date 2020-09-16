@@ -4,9 +4,7 @@ def fass(str)
   subs = []
 
   0.upto(str.length - 1).each do |idx1|
-    idx1.upto(str.length - 1).each do |idx2|
-      subs << str[idx1..idx2]
-    end
+    idx1.upto(str.length - 1).each { |idx2| subs << str[idx1..idx2] }
   end
 
   subs
@@ -24,3 +22,4 @@ end
 
 p find_palindromes('charles')
 p find_palindromes('Hannah')
+
