@@ -51,3 +51,8 @@ algorithm:
   - return (result)
 
 =end
+
+# CW solution
+# def max_and_min(arr1, arr2)
+#   arr1.product(arr2).map { |a, b| (a-b).abs }.minmax.reverse
+# end

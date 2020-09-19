@@ -53,3 +53,33 @@ end
 p multiply_list([3, 5, 7], [9, 10, 11]) == [27, 50, 77]
 
 ###
+
+def average(arr)
+  arr.reduce(:+) / arr.size
+end
+
+puts average([1, 6]) == 3 # integer division: (1 + 6) / 2 -> 3
+puts average([1, 5, 87, 45, 8, 8]) == 25
+puts average([9, 47, 23, 95, 16, 52]) == 40
+
+###
+
+def sum(int)
+  int.digits.reduce(:+)
+end
+
+puts sum(23) == 5
+puts sum(496) == 19
+puts sum(123_456_789) == 45
+
+###
+
+def calculate_bonus(amount, qualify)
+  qualify == true ? amount / 2 : 0
+end
+
+puts calculate_bonus(2800, true) == 1400
+puts calculate_bonus(1000, false) == 0
+puts calculate_bonus(50000, true) == 25000
+
+###
