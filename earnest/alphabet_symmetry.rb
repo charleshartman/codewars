@@ -20,9 +20,7 @@ def solve(arr)
   arr.each do |str|
     counter = 0
     str.downcase.chars.each_with_index do |char, idx|
-      if idx == ALPHA.find_index(char)
-        counter += 1
-      end
+      counter += 1 if idx == ALPHA.find_index(char)
     end
     result << counter
   end
