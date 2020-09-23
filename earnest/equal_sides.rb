@@ -37,7 +37,7 @@ find_even_index(Array(-100..-1)) == -1
 
 <-PEDAC->
 problem:
-  - 
+  - find the index number of an array
 
 input:
 output:
