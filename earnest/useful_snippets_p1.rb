@@ -13,8 +13,8 @@ ALPHA = Array('a'..'z').zip(1..26).to_h
 def fass(str)
   subs = []
 
-  0.upto(str.length - 1).each do |idx1|
-    idx1.upto(str.length - 1).each { |idx2| subs << str[idx1..idx2] }
+  0.upto(str.length - 1) do |idx1|
+    idx1.upto(str.length - 1) { |idx2| subs << str[idx1..idx2] }
   end
 
   subs
@@ -27,3 +27,5 @@ def fibonacci_upto(num)
   fibonacci.pop if fibonacci.last > num
   fibonacci
 end
+
+p fass("merlin")
