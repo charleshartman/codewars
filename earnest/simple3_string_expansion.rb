@@ -20,13 +20,22 @@
 # Your code should be able to work for both lower and capital case letters.
 # string_expansion('') == ''
 
-
+def string_expansion(str)
+  result = ''
+  multiple = 1
+  str.chars.each do |char|
+    char.match?(/[0-9]/) ? multiple = char.to_i : result << char * multiple
+  end
+  result
+end
 
 p string_expansion('3abc') == 'aaabbbccc'
 p string_expansion('3D2a5d2f') == 'DDDaadddddff'
 p string_expansion('0d0a0v0t0y') == ''
-p string_expansion('3d332f2a') == 'dddffaa')
+p string_expansion('3d332f2a') == 'dddffaa'
 p string_expansion('abcde') == 'abcde'
+p string_expansion('111111') == ''
+p string_expansion('M21d1r32') == 'Mdr'
 
 =begin
 
@@ -42,15 +51,15 @@ output: string
 data structure: string, array, integer
 
 algorithm:
-  - initialize (expanded) to []
+  - initialize (expanded) to ''
   - convert given string to (chars)
+  - initialize multiplier to 1
   - iterate through (chars) with index
+    - if char matches /[0-9]/ and chars[index + 1] matches /[0-9]/
+      - next
     - if char matches /[0-9]/ and chars[index + 1] matches /[a-zA-Z]/
-      then push char.to_i many of chars[index + 1] into (expanded)
-    - if char matches /[a-zA-Z]/ and chars[index - 1] matches /[0-9]/ OR
-      char matches /[0-9]/ and chars[index + 1] matches /[0-9]
-      next
-    - else push single (char) into (expanded)
-  - return (expanded) joined to string 
+      then set multiplier to char converted to integer
+    - else push char * multiplier into (expanded)
+  - return (expanded) 
 
 =end
