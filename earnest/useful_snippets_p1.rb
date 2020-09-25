@@ -9,6 +9,9 @@ end
 # generate a-z hash with 1-26 value
 ALPHA = Array('a'..'z').zip(1..26).to_h
 
+# generate swapper hash a-zA-Z
+KEY = (Array('a'..'z').zip('A'..'Z').to_h).merge(Array('A'..'Z').zip('a'..'z').to_h)
+
 # find all substrings
 def fass(str)
   subs = []
@@ -29,3 +32,6 @@ def fibonacci_upto(num)
 end
 
 p fass("merlin")
+
+p fibonacci_upto(100)
+
