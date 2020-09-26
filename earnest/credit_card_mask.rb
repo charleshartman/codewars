@@ -21,7 +21,7 @@
 # '####################################man!'
 
 def maskify(cc)
-  # code
+  cc.length <= 4 ? cc : '#' * (cc.length - 4) + cc[-4..-1]
 end
 
 p maskify('4556364607935616') == '############5616'
@@ -39,6 +39,7 @@ output:
 data structure: 
 
 algorithm:
-  - 
+  - if str.length < 4 return str
+  - '#' * (str.length - 4) + str[-4..-1]
 
 =end
