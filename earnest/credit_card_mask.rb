@@ -32,14 +32,14 @@ p maskify('11111') == '#1111'
 
 <-PEDAC->
 problem:
-  - 
+  - return str with all but last four digits transformed to '#'
 
-input:
-output:
-data structure: 
+input: str
+output: str
+data structure: str
 
 algorithm:
-  - if str.length < 4 return str
+  - if str.length <= 4 return str
   - '#' * (str.length - 4) + str[-4..-1]
 
 =end
