@@ -13,6 +13,8 @@
 # because for this string "abcde" the minimum substring t, such that s is t
 # repeated k times, is itself.
 
+=begin
+
 def fass(str)
   subs = []
 
@@ -27,8 +29,27 @@ end
 
 def f(str)
   subs = fass(str).select { |sub| sub.length > 1 }
-  
+  #
+  #
+  #
 end
+
+=end
 
 p f("ababab") == ["ab", 3]
 p f("abcde") == ["abcde", 1]
+
+=begin
+
+<-PEDAC->
+problem:
+  - 
+
+input:
+output:
+data structure: 
+
+algorithm:
+  - 
+
+=end
