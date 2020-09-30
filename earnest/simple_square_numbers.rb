@@ -24,3 +24,18 @@ p solve(13) == 36
 p solve(17) == 64
 p solve(88901) == 5428900
 p solve(290101) == 429235524
+
+=begin
+
+<-PEDAC->
+problem:
+  - 
+
+input:
+output:
+data structure: 
+
+algorithm:
+  - 
+
+=end
