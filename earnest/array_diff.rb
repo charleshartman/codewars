@@ -15,16 +15,16 @@
 #   arr1
 # end
 
-#rethought/refactored
+# rethought/refactored
 def array_diff(arr1, arr2)
   arr1.select { |val| val if !arr2.include?(val) }
 end
 
 p array_diff([1, 2], [1]) == [2]
-p array_diff([1, 2, 2], [1]) == [2,2]
+p array_diff([1, 2, 2], [1]) == [2, 2]
 p array_diff([1, 2, 2], [2]) == [1]
 p array_diff([1, 2, 2], []) == [1, 2, 2]
-p array_diff([], [1,2]) == []
+p array_diff([], [1, 2]) == []
 
 =begin
 

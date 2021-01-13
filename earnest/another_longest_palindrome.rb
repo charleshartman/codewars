@@ -7,14 +7,14 @@ Longest Palindrome
 Find the length of the longest substring in the given string s that is the same
 in reverse.
 
-As an example, if the input was “I like racecars that go fast”, the substring
+As an example, if the input was "I like racecars that go fast", the substring
 (racecar) length would be 7.
 
 If the length of the input string is 0, the return value must be 0.
 
 Examples:
-"a" -> 1 
-"aab" -> 2  
+"a" -> 1
+"aab" -> 2
 "abcde" -> 1
 "zzbaabcd" -> 4
 "" -> 0
@@ -26,13 +26,13 @@ def find_all_subs(str)
   0.upto(str.length - 1).each do |idx1|
     idx1.upto(str.length - 1).each { |idx2| subs << str[idx1..idx2] }
   end
-  
+
   subs
 end
 
 def longest_palindrome(str)
   return 0 if str.empty?
-  
+
   pals = []
   find_all_subs(str).each { |sub| pals << sub if sub == sub.reverse }
 

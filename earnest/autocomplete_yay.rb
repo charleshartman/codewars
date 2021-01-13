@@ -10,14 +10,15 @@ If there are no matches, return an empty array.
 
 Example:
 
-autocomplete('ai', ['airplane','airport','apple','ball']) = ['airplane','airport']
+autocomplete('ai', ['airplane','airport','apple','ball'])
+                 = ['airplane','airport'])
 
 For this kata, the dictionary will always be a valid array of strings. Please
 return all results in the order given in the dictionary, even if they're not
 always alphabetical. The search should NOT be case sensitive, but the case of
 the word should be preserved when it's returned.
 
-For example, "Apple" and "airport" would both return for an input of 'a'. 
+For example, "Apple" and "airport" would both return for an input of 'a'.
 However, they should return as "Apple" and "airport" in their original cases.
 
 Important note:
@@ -38,19 +39,20 @@ def autocomplete(str, dictionary)
   # result.length <= 5 ? result : result[0..4]
 end
 
-dictionary = [ 'abnormal',
-               'arm-wrestling',
-               'absolute',
-               'airplane',
-               'airport',
-               'amazing',
-               'apple',
-               'ball' ]
+dictionary = ['abnormal',
+              'arm-wrestling',
+              'absolute',
+              'airplane',
+              'airport',
+              'amazing',
+              'apple',
+              'ball']
 
-dictionary2 = [ 'Nopesville' ]
+dictionary2 = ['Nopesville']
 
-p autocomplete('ai', dictionary) == ['airplane','airport']
-p autocomplete('a', dictionary) == ['abnormal','arm-wrestling','absolute','airplane','airport']
+p autocomplete('ai', dictionary) == ['airplane', 'airport']
+p autocomplete('a', dictionary) == ['abnormal', 'arm-wrestling', 'absolute', \
+                                    'airplane', 'airport']
 p autocomplete('n~!@\#$%^&*()_+1234567890ope', dictionary2) == ["Nopesville"]
 
 =begin

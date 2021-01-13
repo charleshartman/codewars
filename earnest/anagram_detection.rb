@@ -13,17 +13,17 @@
 # "foefet" is an anagram of "toffee"
 # "Buckethead" is an anagram of "DeathCubeK"
 
-def is_anagram?(str1, str2)
+def anagram?(str1, str2)
   str1.downcase.chars.sort == str2.downcase.chars.sort
 end
 
-p is_anagram?('Creative', 'Reactive') == true
-p is_anagram?("foefet", "toffee") == true
-p is_anagram?("Buckethead", "DeathCubeK") == true 
-p is_anagram?("Twoo", "WooT") == true
-p is_anagram?("dumble", "bumble") == false
-p is_anagram?("ound", "round") == false
-p is_anagram?("apple", "pale") == false
+p anagram?('Creative', 'Reactive') == true
+p anagram?("foefet", "toffee") == true
+p anagram?("Buckethead", "DeathCubeK") == true
+p anagram?("Twoo", "WooT") == true
+p anagram?("dumble", "bumble") == false
+p anagram?("ound", "round") == false
+p anagram?("apple", "pale") == false
 
 =begin
 
